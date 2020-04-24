@@ -278,13 +278,16 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       sleep: '0 hour(s)',
       mood: 'okay'
     };
-    this.handleChange = this.handleChange.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
     this.setState({
-      value: event.target.value
+      [name]: value
     });
   }
 
@@ -299,23 +302,24 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21,
+        lineNumber: 26,
         columnNumber: 9
       }
     }, __jsx("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22,
+        lineNumber: 27,
         columnNumber: 11
       }
     }, "How many hours of sleep did you have?", __jsx("select", {
+      name: "sleep",
       value: this.state.sleep,
-      onChange: this.handleChange,
+      onChange: this.handleInputChange,
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24,
+        lineNumber: 29,
         columnNumber: 13
       }
     }, __jsx("option", {
@@ -323,7 +327,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25,
+        lineNumber: 30,
         columnNumber: 15
       }
     }, "0 hour(s)"), __jsx("option", {
@@ -331,7 +335,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26,
+        lineNumber: 31,
         columnNumber: 15
       }
     }, "1 hour(s)"), __jsx("option", {
@@ -339,7 +343,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27,
+        lineNumber: 32,
         columnNumber: 15
       }
     }, "2 hour(s)"), __jsx("option", {
@@ -347,7 +351,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28,
+        lineNumber: 33,
         columnNumber: 15
       }
     }, "3 hour(s)"), __jsx("option", {
@@ -355,7 +359,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29,
+        lineNumber: 34,
         columnNumber: 15
       }
     }, "4 hour(s)"), __jsx("option", {
@@ -363,7 +367,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30,
+        lineNumber: 35,
         columnNumber: 15
       }
     }, "5 hour(s)"), __jsx("option", {
@@ -371,7 +375,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31,
+        lineNumber: 36,
         columnNumber: 15
       }
     }, "6 hour(s)"), __jsx("option", {
@@ -379,7 +383,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32,
+        lineNumber: 37,
         columnNumber: 15
       }
     }, "7 hour(s)"), __jsx("option", {
@@ -387,7 +391,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33,
+        lineNumber: 38,
         columnNumber: 15
       }
     }, "8 hour(s)"), __jsx("option", {
@@ -395,7 +399,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34,
+        lineNumber: 39,
         columnNumber: 15
       }
     }, "9 hour(s)"), __jsx("option", {
@@ -403,30 +407,31 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35,
+        lineNumber: 40,
         columnNumber: 15
       }
     }, "10+ hour(s)"))), __jsx("br", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39,
+        lineNumber: 44,
         columnNumber: 11
       }
     }), __jsx("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40,
+        lineNumber: 45,
         columnNumber: 11
       }
     }, "How are you feeling today?", __jsx("select", {
+      name: "mood",
       value: this.state.mood,
-      onChange: this.handleChange,
+      onChange: this.handleInputChange,
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42,
+        lineNumber: 47,
         columnNumber: 13
       }
     }, __jsx("option", {
@@ -434,7 +439,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43,
+        lineNumber: 48,
         columnNumber: 15
       }
     }, ":)"), __jsx("option", {
@@ -442,7 +447,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44,
+        lineNumber: 49,
         columnNumber: 15
       }
     }, ":|"), __jsx("option", {
@@ -450,7 +455,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45,
+        lineNumber: 50,
         columnNumber: 15
       }
     }, ":'("), __jsx("option", {
@@ -458,7 +463,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46,
+        lineNumber: 51,
         columnNumber: 15
       }
     }, ">:("))), __jsx("input", {
@@ -467,7 +472,7 @@ class SleepAndMoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49,
+        lineNumber: 54,
         columnNumber: 11
       }
     }));

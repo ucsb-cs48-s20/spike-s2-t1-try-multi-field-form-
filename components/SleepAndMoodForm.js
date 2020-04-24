@@ -3,12 +3,17 @@ class SleepAndMoodForm extends React.Component {
       super(props);
       this.state = {sleep: '0 hour(s)', mood:'okay'};
   
-      this.handleChange = this.handleChange.bind(this);
+      this.handleInputChange = this.handleInputChange.bind(this);
+
       this.handleSubmit = this.handleSubmit.bind(this);
     }
   
-    handleChange(event) {
-      this.setState({value: event.target.value});
+    handleInputChange(event) {
+      const target = event.target;
+      const value = target.value; 
+      const name = target.name;
+
+      this.setState({[name]: value});
     }
   
     handleSubmit(event) {
@@ -21,7 +26,7 @@ class SleepAndMoodForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             How many hours of sleep did you have?
-            <select value={this.state.sleep} onChange={this.handleChange}>
+            <select name = "sleep" value={this.state.sleep} onChange={this.handleInputChange}>
               <option value="0 hour(s)">0 hour(s)</option>
               <option value="1 hour(s)">1 hour(s)</option>
               <option value="2 hour(s)">2 hour(s)</option>
@@ -39,7 +44,7 @@ class SleepAndMoodForm extends React.Component {
           <br></br>
           <label>
             How are you feeling today? 
-            <select value={this.state.mood} onChange={this.handleChange}>
+            <select name = "mood" value={this.state.mood} onChange={this.handleInputChange}>
               <option value="happy">:)</option>
               <option value="okay">:|</option>
               <option value="sad">:'(</option>

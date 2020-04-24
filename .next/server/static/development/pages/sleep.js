@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -213,6 +213,117 @@ const Header = () => __jsx("div", {
 
 /***/ }),
 
+/***/ "./components/MoodForm.js":
+/*!********************************!*\
+  !*** ./components/MoodForm.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/leena/Documents/cs48/next-learn-demo/spike-s2-t1-try-multi-field-form-/components/MoodForm.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+class MoodForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 'okay'
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      value: event.target.value
+    });
+  }
+
+  handleSubmit(event) {
+    alert('You recorded you were ' + this.state.value + ' today');
+    event.preventDefault();
+  }
+
+  render() {
+    return __jsx("form", {
+      onSubmit: this.handleSubmit,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21,
+        columnNumber: 9
+      }
+    }, __jsx("label", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 11
+      }
+    }, "How are you feeling today?", __jsx("select", {
+      value: this.state.value,
+      onChange: this.handleChange,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24,
+        columnNumber: 13
+      }
+    }, __jsx("option", {
+      value: "happy",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25,
+        columnNumber: 15
+      }
+    }, ":)"), __jsx("option", {
+      value: "okay",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26,
+        columnNumber: 15
+      }
+    }, ":|"), __jsx("option", {
+      value: "sad",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27,
+        columnNumber: 15
+      }
+    }, ":'("), __jsx("option", {
+      value: "angry",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28,
+        columnNumber: 15
+      }
+    }, ">:("))), __jsx("input", {
+      type: "submit",
+      value: "Submit",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31,
+        columnNumber: 11
+      }
+    }));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MoodForm);
+
+/***/ }),
+
 /***/ "./components/MyLayout.js":
 /*!********************************!*\
   !*** ./components/MyLayout.js ***!
@@ -253,6 +364,173 @@ const Layout = props => __jsx("div", {
 }), props.children);
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
+
+/***/ }),
+
+/***/ "./components/SleepForm.js":
+/*!*********************************!*\
+  !*** ./components/SleepForm.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/leena/Documents/cs48/next-learn-demo/spike-s2-t1-try-multi-field-form-/components/SleepForm.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+class SleepForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: '0 hour(s)'
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      value: event.target.value
+    });
+  }
+
+  handleSubmit(event) {
+    alert('You recorded ' + this.state.value + ' of sleep last night');
+    event.preventDefault();
+  }
+
+  render() {
+    return __jsx("form", {
+      onSubmit: this.handleSubmit,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21,
+        columnNumber: 9
+      }
+    }, __jsx("label", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 11
+      }
+    }, "How many hours of sleep did you have?", __jsx("select", {
+      value: this.state.value,
+      onChange: this.handleChange,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24,
+        columnNumber: 13
+      }
+    }, __jsx("option", {
+      value: "0 hour(s)",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25,
+        columnNumber: 15
+      }
+    }, "0 hour(s)"), __jsx("option", {
+      value: "1 hour(s)",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26,
+        columnNumber: 15
+      }
+    }, "1 hour(s)"), __jsx("option", {
+      value: "2 hour(s)",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27,
+        columnNumber: 15
+      }
+    }, "2 hour(s)"), __jsx("option", {
+      value: "3 hour(s)",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28,
+        columnNumber: 15
+      }
+    }, "3 hour(s)"), __jsx("option", {
+      value: "4 hour(s)",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29,
+        columnNumber: 15
+      }
+    }, "4 hour(s)"), __jsx("option", {
+      value: "5 hour(s)",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30,
+        columnNumber: 15
+      }
+    }, "5 hour(s)"), __jsx("option", {
+      value: "6 hour(s)",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31,
+        columnNumber: 15
+      }
+    }, "6 hour(s)"), __jsx("option", {
+      value: "7 hour(s)",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32,
+        columnNumber: 15
+      }
+    }, "7 hour(s)"), __jsx("option", {
+      value: "8 hour(s)",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33,
+        columnNumber: 15
+      }
+    }, "8 hour(s)"), __jsx("option", {
+      value: "9 hour(s)",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34,
+        columnNumber: 15
+      }
+    }, "9 hour(s)"), __jsx("option", {
+      value: "10+ hour(s)",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35,
+        columnNumber: 15
+      }
+    }, "10+ hour(s)"))), __jsx("input", {
+      type: "submit",
+      value: "Submit",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39,
+        columnNumber: 11
+      }
+    }));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (SleepForm);
 
 /***/ }),
 
@@ -1925,51 +2203,83 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/index.js":
+/***/ "./pages/sleep.js":
 /*!************************!*\
-  !*** ./pages/index.js ***!
+  !*** ./pages/sleep.js ***!
   \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Index; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Sleep; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
-var _jsxFileName = "/Users/leena/Documents/cs48/next-learn-demo/spike-s2-t1-try-multi-field-form-/pages/index.js";
+/* harmony import */ var _components_SleepForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SleepForm */ "./components/SleepForm.js");
+/* harmony import */ var _components_MoodForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MoodForm */ "./components/MoodForm.js");
+/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
+var _jsxFileName = "/Users/leena/Documents/cs48/next-learn-demo/spike-s2-t1-try-multi-field-form-/pages/sleep.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-function Index() {
-  return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+
+
+function Sleep() {
+  return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5,
-      columnNumber: 5
+      lineNumber: 8,
+      columnNumber: 7
     }
   }, __jsx("p", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 10,
+      columnNumber: 5
+    }
+  }, "This is the sleep page"), __jsx("h2", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 6
+    }
+  }, " Sleep Form "), __jsx(_components_SleepForm__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 9
+    }
+  }), __jsx("h2", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
       columnNumber: 7
     }
-  }, "Hello Next.js"));
+  }, " Mood Form "), __jsx(_components_MoodForm__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 9
+    }
+  }));
 }
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!******************************!*\
-  !*** multi ./pages/index.js ***!
+  !*** multi ./pages/sleep.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/leena/Documents/cs48/next-learn-demo/spike-s2-t1-try-multi-field-form-/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/leena/Documents/cs48/next-learn-demo/spike-s2-t1-try-multi-field-form-/pages/sleep.js */"./pages/sleep.js");
 
 
 /***/ }),
@@ -2030,4 +2340,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=sleep.js.map
